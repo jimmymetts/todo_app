@@ -9,14 +9,16 @@ class App extends Component {
 
         this.state={
           newItem:"",
+          list:[]
 
         }
       }
       render() {
       return (
         <div className="App">
-
+          <div>
           Test Text
+          </div>
     </div>
   );
 }
