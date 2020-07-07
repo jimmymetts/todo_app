@@ -13,6 +13,15 @@ class App extends Component {
 
         }
       }
+
+      addItem() {
+        // create item with unique id
+        const newItem={
+          id: 1 + Math.random(),
+          
+        }
+      }
+
       render() {
       return (
         <div className="App">
@@ -25,13 +34,14 @@ class App extends Component {
             value={this.state.newItem}
             onChange={e => this.updateItem("newItem", e.target.value)}
           />
-          <button>
+          <button onClick={() => this.addItem} >
+            Add
             
           </button>
           </div>
     </div>
   );
-}
+} 
 }
 
 
