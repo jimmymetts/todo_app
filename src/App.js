@@ -25,6 +25,9 @@ class App extends Component {
             value={this.state.newItem}
             onChange={e => this.updateItem("newItem", e.target.value)}
           />
+          <button>
+            
+          </button>
           </div>
     </div>
   );
