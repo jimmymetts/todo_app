@@ -17,7 +17,9 @@ class App extends Component {
       updateInput(key, value){
         //update react state
         this.setState({
-          
+        [key]: value
+
+
         })
       }
 
@@ -58,6 +60,19 @@ class App extends Component {
             Add
             
           </button>
+          <br/>
+          <ul>
+            {this.state.list.map(item => {
+              return(
+                <li key={item.id}>
+                  {item.value}
+                  <button onClick={()=> this.deleteItem(item.id)}>
+                                  
+                  </button>
+                </li>
+              )
+            } )}
+          </ul>
           </div>
     </div>
   );
