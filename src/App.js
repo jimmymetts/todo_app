@@ -17,7 +17,14 @@ class App extends Component {
       return (
         <div className="App">
           <div>
-          Test Text
+          Add an item...
+          <br/>
+          <input
+            type="text"
+            placeholder="Type item here..."
+            value={this.state.newItem}
+            onChange={e => this.updateItem("newItem", e.target.value)}
+          />
           </div>
     </div>
   );
