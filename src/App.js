@@ -14,6 +14,13 @@ class App extends Component {
         }
       }
 
+      updateInput(key, value){
+        //update react state
+        this.setState({
+          
+        })
+      }
+
       addItem() {
         // create item with unique id
         const newItem={
@@ -25,7 +32,14 @@ class App extends Component {
         const list = [...this.state.list];
 
         //add new item to list
-         list.push(newItem)
+         list.push(newItem);
+        
+         //update state with new list and reset newItem input
+         this.setState({
+           list,
+           newItem:""
+         })
+
       }
 
       render() {
