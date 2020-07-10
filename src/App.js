@@ -67,7 +67,7 @@ class App extends Component {
           />
           <button onClick={() => this.addItem()} >
             Add
-            
+             
           </button>
           <br/>
           <ul>
@@ -75,9 +75,11 @@ class App extends Component {
               return(
                 <li key={item.id}>
                   {item.value}
-                  <button onClick={()=> this.deleteItem(item.id)}>
-
-                  </button>
+                  <button 
+                    onClick={()=> this.deleteItem(item.id)}
+                    > X 
+                    <br/>
+                    </button>
                 </li>
               )
             } )}
