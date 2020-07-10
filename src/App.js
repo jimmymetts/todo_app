@@ -40,8 +40,17 @@ class App extends Component {
          this.setState({
            list,
            newItem:""
-         })
+         });
+      }
 
+      deleteItem(id){
+        //copy current list of items
+        const list = [...this.state.list]; 
+
+        //filter out item being deleted
+        const updatedList = list.filter(item => item.id !== id);
+
+        this.setState({list: updatedList});
       }
 
       render() {
@@ -54,7 +63,7 @@ class App extends Component {
             type="text"
             placeholder="Type item here..."
             value={this.state.newItem}
-            onChange={e => this.updateItem("newItem", e.target.value)}
+            onChange={e => this.updateInput("newItem", e.target.value)}
           />
           <button onClick={() => this.addItem} >
             Add
@@ -67,7 +76,7 @@ class App extends Component {
                 <li key={item.id}>
                   {item.value}
                   <button onClick={()=> this.deleteItem(item.id)}>
-                                  
+
                   </button>
                 </li>
               )
