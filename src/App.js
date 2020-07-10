@@ -65,7 +65,7 @@ class App extends Component {
             value={this.state.newItem}
             onChange={e => this.updateInput("newItem", e.target.value)}
           />
-          <button onClick={() => this.addItem} >
+          <button onClick={() => this.addItem()} >
             Add
             
           </button>
